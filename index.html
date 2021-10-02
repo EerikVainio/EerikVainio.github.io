@@ -1,190 +1,291 @@
 <!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Ticket to Ride - Asia</title>
-    <link rel="icon" type="image/png" href="favicon_32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Source+Sans+Pro:600&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script type="text/javascript" src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Eerik Vainio | UI/UX designer</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body class="ccb-lightgrey">
-    <img id="image" src="cardtemplate2.jpg" alt="Card" width="100%" class="p-2">
-    <img id="image_yellow" src="cardtemplate_yellow.jpg" alt="Card" width="100%" class="p-2">
+<body class="ccb-primary">
+	<div>
 
-    <div id="container" class="d-flex flex-column ccb-lightgrey p-2">
-        <div id="logoDiv" class="d-flex flex-fill">
-            <img id="logo" src="logo1.png" id="Ticket To Ride Asia" width="100%" class="align-self-center p-2">
-        </div>
-        <div id="contentDiv" class="container flex-column flex-fill justify-content-end px-2">
+		<!-- MOBILE DROPDOWN NAVIGATION -->
 
-            <p class="ccfont-montserrat-bold text-center mb-1" style="font-size:0.6em;opacity:0.8;">GAME MODES (COMING SOON)</p>
-            <div id="gameModeDiv" class="d-flex justify-content-center mb-3">
-                <div id="gamemode1Div" class="d-flex flex-column align-items-center">
-                    <button type="button" id="gamemode1Button" class="btn ccbtn-yellow ccrounded ccshadow-bottom p-0 mx-1">
-                        <img id="gamemode1" src="gamemode1.png" alt="Gamemode 1" width="60%;">
-                    </button>
-                </div>
-                <div id="gamemode2Div" class="d-flex flex-column align-items-center">
-                    <button type="button" id="gamemode2Button" class="btn ccbtn-white ccrounded ccshadow-bottom p-0 mx-1">
-                        <img id="gamemode1" src="gamemode2.png" alt="Gamemode 1" width="60%;">
-                    </button>
-                </div>
-                <div id="gamemode3Div" class="d-flex flex-column align-items-center">
-                    <button type="button" id="gamemode3Button" class="btn ccbtn-white ccrounded ccshadow-bottom p-0 mx-1">
-                        <img id="gamemode1" src="gamemode3.png" alt="Gamemode 1" width="60%;">
-                    </button>
-                </div>
-                <div id="gamemode4Div" class="d-flex flex-column align-items-center">
-                    <button type="button" id="gamemode4Button" class="btn ccbtn-white ccrounded ccshadow-bottom p-0 mx-1">
-                        <img id="gamemode1" src="gamemode4.png" alt="Gamemode 1" width="60%;">
-                    </button>
-                </div>
-            </div>
+		<div class="ccb-red cl-mobilenav cz-2000" id="mobilenav">
+			<div class="navbar justify-content-end cl-tightmargin navbar-dark py-3 px-0">
+				<i class="material-icons c-nav-close ct-noselect" id="closebutton" style="font-size:38px">close</i>
+			</div>
+		</div>
 
-            <div id="iDrawButtonDiv" class="d-flex flex-column justify-content-center mx-3 my-2">
-                <p class="ccfont-montserrat-bold mb-1 ml-4" style="font-size:0.6em;opacity:0.8;">INITIAL DESTINATION TICKETS</p>
-                <div id="iDrawDiv" class="d-flex ccshadow-bottom ccrounded-top border-bottom">
-                    <span class="flex-fill ccb-white ccrounded-topleft ccfont-montserrat-bold cctext-black m-0 py-2 pl-4" style="font-size:0.8em;">DRAW</span>
-                    <div id="iDrawButtonGroup" class="btn-group">
-                        <button type="button" id="iDrawMinusButton" class="btn ccbtn-white px-3"><i id="iDrawMinusIcon" class="fas fa-minus cctext-purple" style="font-size:1em;"></i></button>
-                        <div id="iDrawAmountDiv" class="ccb-white m-0 text-center vertical-center">
-                            <h4 id="iDrawAmountLabel" class="ccfont-montserrat-bold m-0" style="width:3rem;font-size:1.4em;text-align:center;">5</h4>
-                        </div>
-                        <button type="button" id="iDrawPlusButton" class="btn ccbtn-white ccrounded-topright px-3"><i class="fas fa-plus cctext-purple" style="font-size: 1em;"></i></button>
-                    </div>
-                </div>
-                <div id="iDiscardDiv" class="d-flex ccshadow-bottom ccrounded-bottom">
-                    <span class="flex-fill ccb-white ccrounded-bottomleft ccfont-montserrat-bold cctext-black m-0 py-2 pl-4" style="font-size:0.8em;">DISCARD</span>
-                    <div id="iDiscardButtonGroup" class="btn-group">
-                        <button type="button" id="iDiscardMinusButton" class="btn ccbtn-white px-3"><i class="fas fa-minus cctext-purple" style="font-size:1em;"></i></button>
-                        <div id="iDiscardAmountDiv" class="ccb-white m-0 text-center vertical-center">
-                            <h4 id="iDiscardAmountLabel" class="ccfont-montserrat-bold m-0" style="width:3rem;font-size:1.4em;text-align:center;">2</h4>
-                        </div>
-                        <button type="button" id="iDiscardPlusButton" class="btn ccbtn-white ccrounded-bottomright px-3"><i class="fas fa-plus cctext-purple" style="font-size: 1em;"></i></button>
-                    </div>
-                </div>
-            </div>
+		<!-- NAVBAR -->
 
-            <div id="aDrawButtonDiv" class="d-flex flex-column justify-content-center mx-3 my-3">
-                <p class="ccfont-montserrat-bold mb-1 ml-4" style="font-size:0.6em;opacity:0.8;">ADDITIONAL DESTINATION TICKETS</p>
-                <div id="aDrawDiv" class="d-flex ccshadow-bottom ccrounded-top border-bottom">
-                    <span class="flex-fill ccb-white ccrounded-topleft ccfont-montserrat-bold cctext-black m-0 py-2 pl-4" style="font-size:0.8em;">DRAW</span>
-                    <div id="aDrawButtonGroup" class="btn-group">
-                        <button type="button" id="aDrawMinusButton" class="btn ccbtn-white px-3"><i class="fas fa-minus cctext-purple" style="font-size:1em;"></i></button>
-                        <div id="aDrawAmountDiv" class="ccb-white m-0 text-center vertical-center">
-                            <h4 id="aDrawAmountLabel" class="ccfont-montserrat-bold m-0" style="width:3rem;font-size:1.4em;text-align:center;">3</h4>
-                        </div>
-                        <button type="button" id="aDrawPlusButton" class="btn ccbtn-white ccrounded-topright px-3"><i class="fas fa-plus cctext-purple" style="font-size: 1em;"></i></button>
-                    </div>
-                </div>
-                <div id="aDiscardDiv" class="d-flex ccshadow-bottom ccrounded-bottom">
-                    <span class="flex-fill ccb-white ccrounded-bottomleft ccfont-montserrat-bold cctext-black m-0 py-2 pl-4" style="font-size:0.8em;">DISCARD</span>
-                    <div id="aDiscardButtonGroup" class="btn-group">
-                        <button type="button" id="aDiscardMinusButton" class="btn ccbtn-white px-3"><i class="fas fa-minus cctext-purple" style="font-size:1em;"></i></button>
-                        <div id="aDiscardAmountDiv" class="ccb-white m-0 text-center vertical-center">
-                            <h4 id="aDiscardAmountLabel" class="ccfont-montserrat-bold m-0" style="width:3rem;font-size:1.4em;text-align:center;">2</h4>
-                        </div>
-                        <button type="button" id="aDiscardPlusButton" class="btn ccbtn-white ccrounded-bottomright px-3" disabled><i class="fas fa-plus cctext-purple" style="font-size: 1em;"></i></button>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="startButtonDiv" class="container d-flex justify-content-center">
-                <button type="button" id="startGameButton" class="btn ccbtn-purple px-4 py-3 my-2 ccshadow-bottom ccrounded ccfont-montserrat w-100">START GAME</button>
-            </div>
-        </div>
+		<div class="ccb-primary sticky-top">
+			<div class="navbar cl-tightmargin navbar-dark py-3 px-0" id="header">
+				<ul class="nav">
+					<li class="nav-item">
+		      			<span class="cf-nav-title c-nav-title ct-noselect">EERIK VAINIO</span>
+		    		</li>
+				</ul>
+				<ul class="nav">
+					<li class="nav-item">
+		      			<a class="cf-nav-active c-nav-link" href="#">WORK</a>
+		    		</li>
+					<li class="nav-item">
+		      			<a class="cf-nav-inactive c-nav-link" href="#">ABOUT</a>
+		    		</li>
+		    		<li class="nav-item">
+		      			<a class="cf-nav-inactive c-nav-link" href="#">DOWNLOAD CV</a>
+		    		</li>
+		    		<li class="nav-item">
+		      			<a class="cf-nav-inactive c-nav-link" href="#">CONTACT</a>
+		    		</li>
+		    		<li>
+			    		<i class="material-icons c-nav-burger ct-noselect" id="burgerbutton" style="font-size:38px">menu</i>
+			    	</li>
+				</ul>
+			</div>
+		</div>
 
-        <div id="canvasDiv" class="px-2 mb-5"></div>
-        <div id="spacerDiv" style="height:2rem;"></div>
+		<!-- PROFILE SECTION -->
 
-        <div id="fixedBottomDiv" class="fixed-bottom">
-        <div id="alertFooterDiv" class="row justify-content-around ccb-yellow ccrounded-topleft p-2 mx-0 ccshadow-top vertical-center">
-            <div>
-                <h5 class="cctext-purple ccfont-montserrat mt-2 mb-0">Discard Phase</h5>
-                <p id="alertFooterText" class="cctext-darkgrey ccfont-sourcesans mb-2" style="font-size:0.8em;opacity:0.8;">Select up to 2 destination tickets to discard</p>
-            </div>
-            <div id="alertFooterNumberDiv" class="col-2 px-0">
-                <div class="d-flex justify-content-center ccrounded ccb-lightgrey">
-                    <p class="m-0 cctext-grey ccfont-montserrat my-1" style="font-size:0.8em;"><strong id="alertFooterNumber">0/5</strong></p>
-                </div>
-            </div>
-            <div id="aCanvasDiv" class="py-3 d-flex"></div>
-        </div>
+		<div class="d-flex flex-nowrap cl-tightmargin cl-intro-container" style="height:400px">
+			<div class="col d-flex flex-wrap align-items-center h-100">
+				<div class="d-flex-column cz-20 cl-intro-text">
+					<div class="cf-header-3 mb-3">
+						<span class="cct-secondary">Hi, I'm </span><span class="cct-highlight">Eerik</span><span class="cct-secondary">.</span>
+					</div>
+					<div class="cf-header-1 my-3">
+						<span class="cct-primary">I design innovative<br>user-centric experiences.</span>
+					</div>
+					<div class="d-flex-column cf-header-4 my-5">
+						<div class="my-4">
+							<span class="d-flex flex-nowrap align-items-center"><i class="material-icons cct-highlight ct-noselect mr-4">work</i><span class="cct-secondary">UI/UX designer with 2+ years of work experience</span></span>
+						</div>
+						<div class="my-4">
+							<span class="d-flex flex-nowrap align-items-center"><i class="material-icons cct-highlight ct-noselect mr-4">school</i><span class="cct-secondary">Interactive Media student in Tampere University</span></span>
+						</div>
+						<div class="my-4">
+							<span class="d-flex flex-nowrap align-items-center"><i class="material-icons cct-highlight ct-noselect mr-4">place</i><span class="cct-secondary">Based in Turku, Finland</span></span>
+						</div>
+					</div>
+					<div>
+						<a class="cct-primary cf-link d-inline-flex align-items-center" href="#">
+							<span>Learn more about me</span><i class="material-icons ct-noselect cl-arrow ml-3" style="font-size:14px">east</i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col d-flex" id="profilepic">
+				<img class="cz-10 cl-intro-img" src="images/profilepic1.png" alt="Eerik Vainio">
+			</div>
+		</div>
 
-        <div id="footerDiv" class="d-flex justify-content-between px-2 py-3 ccb-white ccrounded-topleft ccshadow-top vertical-center">
-            <button type="button" data-toggle="modal" data-target="#backModal" id="backButton" class="btn ccbtn-lightgrey-red ccrounded ccfont-montserrat py-3 px-4 mx-2 ccshadow-bottom" style="font-size:1.2em;"><i class="fas fa-arrow-left"></i></button>
-            <!--<button type="button" id="arrayButton" class="btn ccbtn-white-red p-2 mx-1 my-2">DEVBTN</button>-->
-            <div id="footerValues" class="d-flex justify-content-around ccb-grey ccrounded ccshadow-bottom py-2 px-2 mx-2 w-100">
-                <span id="footerScore" class="ccfont-montserrat-bold"><i class="fas fa-trophy cctext-orange px-2"></i>-</span>
-                <span id="footerTickets" class="ccfont-montserrat-bold"><i class="fas fa-ticket-alt cctext-green px-2"></i>-</span>
-            </div>
-            <button type="button" data-toggle="modal" data-target="#discardModal" id="discardButton" class="btn ccbtn-purple ccrounded ccfont-montserrat py-3 px-4 mx-2 ccshadow-bottom" style="font-size:1.2em;"><i class="fas fa-check"></i></button>
-            <button type="button" data-toggle="modal" data-target="#discardModal" id="drawButton" class="btn ccbtn-lightgrey-purple ccrounded ccfont-montserrat py-3 px-4 mx-2 ccshadow-bottom" style="font-size:1.2em;"></button>
-        </div>
-    </div>
+		<!-- WORK SECTION -->
 
-        <div class="modal fade" id="backModal">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-              
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title ccfont-montserrat">Quit Game</h4>
-                </div>
-                
-                <!-- Modal body -->
-                <div class="modal-body ccfont-montserrat" style="font-size: 0.8em;">
-                  Do you want to quit the game?</br><p class="cctext-red">All destination tickets will be lost.</p>
-                </div>
-                
-                <!-- Modal footer -->
-                <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn ccbtn-grey ccfont-montserrat ccrounded px-4" data-dismiss="modal">No</button>
-                    <button type="button" id="backYesButton" class="btn ccbtn-red ccfont-montserrat ccrounded px-4" data-dismiss="modal">Yes</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+		<div class="cz-30 cl-work-container ccb-primary m-0">
 
-          <div class="modal fade" id="discardModal">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-              
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 id="discardModalHeader" class="modal-title ccfont-montserrat">Discard Cards</h4>
-                </div>
-                
-                <!-- Modal body -->
-                <div id="discardModalBody" class="modal-body ccfont-montserrat" style="font-size: 0.8em;">
-                </div>
-                
-                <!-- Modal footer -->
-                <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn ccbtn-grey ccfont-montserrat ccrounded px-4" data-dismiss="modal">No</button>
-                    <button type="button" id="discardYesButton" class="btn ccfont-montserrat ccbtn-red ccrounded px-4" data-dismiss="modal">Yes</button>
-                    <button type="button" id="drawYesButton" class="btn ccbtn-red ccfont-montserrat ccrounded px-4" data-dismiss="modal">Yes</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+			<!-- Card 1 -->
 
-    </div>
+			<div class="row cz-40 d-flex flex-row flex-nowrap align-items-center cl-work-card cs-work-card m-3 p-5" style="background-image:url('https://www.nsiontec.com/wp-content/uploads/2021/04/NSC3_Situational_Awareness.jpg')">
+				<div class="cl-work-card-overlay ccb-gradient-left">
+
+				</div>
+				<div class="col-sm-6 d-flex flex-nowrap pr-5">
+					<div class="d-flex-column cz-50 cl-work-text">
+						<div class="cf-header-2 pb-5">
+							<span class="cct-primary">NSC Platform™</span>
+						</div>
+						<div class="cf-text pb-3">
+							<span class="cct-secondary">Realtime video streaming and storing from mobile clients in the field to a centralized command center enabling a comprehensive operational view and enhanced situational awareness.</span>
+						</div>
+						<div class="pb-5">
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Web</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Mobile</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX/UI design</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX research</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Prototyping</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Design system</span>
+							</div>
+						</div>
+						<div class="pt-5">
+							<a class="cct-primary cf-link d-inline-flex align-items-center" href="#">
+								<span>Learn more</span><i class="material-icons ct-noselect cl-arrow ml-3" style="font-size:14px">east</i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 d-flex pl-5">
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+
+			<div class="row cz-40 d-flex flex-row-reverse flex-nowrap align-items-center cl-work-card cs-work-card m-3 p-5" style="background-image:url('images/testbackground1.png')">
+				<div class="cl-work-card-overlay ccb-gradient-right">
+
+				</div>
+				<div class="col-sm-6 d-flex flex-nowrap pl-5">
+					<div class="d-flex-column cz-50 cl-work-text">
+						<div class="cf-header-2 pb-5">
+							<span class="cct-primary">Finnish Red Cross digital brochure</span>
+						</div>
+						<div class="cf-text pb-3">
+							<span class="cct-secondary">A mobile solution to spread awareness about different volunteering activities the Finnish Red Cross offers.</span>
+						</div>
+						<div class="pb-5">
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Mobile</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX/UI design</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Web development</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX research</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Prototyping</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Design system</span>
+							</div>
+						</div>
+						<div class="pt-5">
+							<a class="cct-primary cf-link d-inline-flex align-items-center" href="#">
+								<span>Learn more</span><i class="material-icons ct-noselect cl-arrow ml-3" style="font-size:14px">east</i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 d-flex pr-5">
+				</div>
+			</div>
+
+			<!-- Card 3 -->
+
+			<div class="row cz-40 d-flex flex-row flex-nowrap align-items-center cl-work-card cs-work-card m-3 p-5" style="background-image:url('images/testbackground2.jpg')">
+				<div class="cl-work-card-overlay ccb-gradient-left">
+
+				</div>
+				<div class="col-sm-6 d-flex flex-nowrap pr-5">
+					<div class="d-flex-column cz-50 cl-work-text">
+						<div class="cf-header-2 pb-5">
+							<span class="cct-primary">Saviour - A budget planning app</span>
+						</div>
+						<div class="cf-text pb-3">
+							<span class="cct-secondary">Realtime video streaming and storing from mobile clients in the field to a centralized command center enabling a comprehensive operational view and enhanced situational awareness.</span>
+						</div>
+						<div class="pb-5">
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Mobile</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX/UI design</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Web development</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX research</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Prototyping</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Design system</span>
+							</div>
+						</div>
+						<div class="pt-5">
+							<a class="cct-primary cf-link d-inline-flex align-items-center" href="#">
+								<span>Learn more</span><i class="material-icons ct-noselect cl-arrow ml-3" style="font-size:14px">east</i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 d-flex pl-5">
+				</div>
+			</div>
+
+			<!-- Card 4 -->
+
+			<div class="row cz-40 d-flex flex-row-reverse flex-nowrap align-items-center cl-work-card cs-work-card m-3 p-5" style="background-image:url('images/testbackground3.jpg')">
+				<div class="cl-work-card-overlay ccb-gradient-right">
+
+				</div>
+				<div class="col-sm-6 d-flex flex-nowrap pl-5">
+					<div class="d-flex-column cz-50 cl-work-text">
+						<div class="cf-header-2 pb-5">
+							<span class="cct-primary">Ticket to Ride Asia mobile expansion</span>
+						</div>
+						<div class="cf-text pb-3">
+							<span class="cct-secondary">A personal project LOREM IPSUM</span>
+						</div>
+						<div class="pb-5">
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Mobile</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX/UI design</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Web development</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">UX research</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Prototyping</span>
+							</div>
+							<div class="cf-pill ct-noselect">
+								<span class="cct-primary">Design system</span>
+							</div>
+						</div>
+						<div class="pt-5">
+							<a class="cct-primary cf-link d-inline-flex align-items-center" href="#">
+								<span>Learn more</span><i class="material-icons ct-noselect cl-arrow ml-3" style="font-size:14px">east</i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 d-flex pr-5">
+				</div>
+			</div>
+
+		</div>
+
+		<!-- FOOTER -->
+
+		<div class="container-fluid cl-footer-container">
+			<div class="cl-footer cl-tightmargin h-100">
+			</div>
+		</div>
+
+	</div>
+
 </body>
+</html>
