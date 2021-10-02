@@ -242,7 +242,7 @@ body {
 }
 .cl-mobilenav {
 	position: fixed;
-	top: -100%;
+	top: 0%;
 	height: 100%;
 	width: 100%;
 	transition-duration: 0.5s;
