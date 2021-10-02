@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	function openMobileNav() {
 		console.log("Mobile nav opened");
-		document.getElementById("mobilenav").style.transform = "translate(0, 100%)";
+		//document.getElementById("mobilenav").style.transform = "translate(0, 100%)";
+		document.getElementById("mobilenav").style.top = "0";
 	}
 
 	function closeMobileNav() {
 		console.log("Mobile nav closed");
-		document.getElementById("mobilenav").style.transform = "translate(0, 0)";
+		document.getElementById("mobilenav").style.top = "-100%";
 	}
 
 	/*document.getElementById("arrowbutton1").addEventListener("mouseenter", arrowButton1Hover);
