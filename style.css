@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+html, body {
+	height: 100%;
+}
+
 /*CUSTOM COLORS*/
 
 /*Background*/
@@ -163,6 +167,7 @@
 	font-weight: 400;
 	font-size: 14px;
 	text-shadow: 0 0 6px rgba(0,0,0,0.6);
+	white-space: normal;
 }
 .cf-pill {
 	font-family: 'Sora', sans-serif;
