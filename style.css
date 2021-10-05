@@ -125,7 +125,6 @@ body {
 @media only screen and (min-width: 768px) {
 	.cf-header-card-1 {
 		font-size: 28px;
-		margin-bottom: 3rem!important;
 	}
 	.cf-text {
 		font-size: 16px;
@@ -307,6 +306,7 @@ body {
 	transition-timing-function: ease-out;
 }
 .cl-intro-container {
+	height: 400px;
 	margin-top: 5rem!important;
 	margin-bottom: 10rem!important;
 }
@@ -333,7 +333,6 @@ body {
 }
 .cl-work-card {
 	position: relative;
-	height: 500px;
 	border-radius: 2px;
 	background-position: center;
 	background-size: cover;
@@ -359,33 +358,47 @@ body {
 	width: 100%;
 	height: 100%;
 }
-.cl-work-text {
-	min-width: 200px;
-}
 @media only screen and (min-width: 768px) {
 	.cl-work-card {
-		height: 500px;
 		margin: 0 1rem 3rem 1rem!important;
 	}
 	.cl-work-image {
 		display: block!important;
 	}
 	.cl-work-text {
-		padding: 3rem 3rem 3rem 3rem!important;
-		max-width: 400px;
+		padding: 3rem!important;
+		max-width: 460px;
+	}
+	.cl-card-header {
+		margin-bottom: 2rem!important;
+	}
+	.cl-card-text {
+		margin-bottom: 2rem!important;
+	}
+	.cl-card-pills {
+		margin-bottom: 3rem!important;
 	}
 }
 @media only screen and (max-width: 767.98px) {
 	.cl-work-card {
-		height: 360px;
 		margin: 0 1rem 1rem 1rem!important;
 	}
 	.cl-work-image {
 		display: none!important;
 	}
 	.cl-work-text {
-		padding: 2rem 0rem 2rem 0rem!important;
-		max-width: 90%;
+		padding: 2rem!important;
+		*max-width: 90%;
+	}
+	.cl-card-header {
+		margin-bottom: 1rem!important;
+	}
+	.cl-card-text {
+		margin-bottom: 1rem!important;
+
+	}
+	.cl-card-pills {
+		margin-bottom: 2rem!important;
 	}
 }
 .cl-work-image-container {
