@@ -128,15 +128,15 @@ body {
 		white-space: normal;
 	}
 	.cf-header-2 {
-		font-size: 20px;
+		font-size: 24px;
 		white-space: normal;
 	}
 	.cf-header-3 {
-		font-size: 16px;
+		font-size: 18px;
 		white-space: normal;
 	}
 	.cf-header-4 {
-		font-size: 12px!important;
+		font-size: 14px!important;
 		white-space: normal;
 	}
 }
@@ -249,6 +249,17 @@ body {
 	border-bottom: 1.8px solid #54B89F;
 	transition-duration: 0.2s;
 }
+.cf-link-simple {
+	color: #54B89F!important;
+	border-bottom: 1.8px solid #1D2535;
+	transition-duration: 0.2s;
+}
+.cf-link-simple:hover {
+	color: #54B89F!important;
+	text-decoration: none;
+	border-bottom: 1.8px solid #54B89F;
+	transition-duration: 0.2s;
+}
 .cf-text {
 	font-family: 'Sora', sans-serif;
 	font-weight: 500;
@@ -347,7 +358,7 @@ body {
 	top: -100%;
 	height: 100%;
 	width: 100%;
-	transition-duration: 0.5s;
+	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 }
 .cl-mobilenav-item, .cl-mobilenav-item-active {
@@ -501,6 +512,8 @@ body {
 .cl-contactfooter {
 	margin-top: 10rem!important;
 	margin-bottom: 10rem!important;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 .cl-footer-container {
 	height: 60px;
