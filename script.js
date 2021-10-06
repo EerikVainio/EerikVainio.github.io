@@ -44,10 +44,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		console.log("Mobile nav opened");
 		//document.getElementById("mobilenav").style.transform = "translate(0, 100%)";
 		document.getElementById("mobilenav").style.top = "0";
+		disableScroll();
 	}
 
 	function closeMobileNav() {
 		console.log("Mobile nav closed");
 		document.getElementById("mobilenav").style.top = "-100%";
+		enableScroll();
 	}
+
+	function disableScroll() {
+            // Get the current page scroll position
+            scrollTop = 
+              window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = 
+              window.pageXOffset || document.documentElement.scrollLeft,
+  
+                // if any scroll is attempted,
+                // set this to the previous value
+                window.onscroll = function() {
+                    window.scrollTo(scrollLeft, scrollTop);
+                };
+        }
+  
+        function enableScroll() {
+            window.onscroll = function() {};
+        }
 });
