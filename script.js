@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	function closeMobileNav() {
 		console.log("Mobile nav closed");
-		document.getElementById("mobilenav").style.top = "-100%";
+		document.getElementById("mobilenav").style.top = "-140%";
 		enableScroll();
 	}
 
